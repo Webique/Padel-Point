@@ -7,6 +7,10 @@ import background from "./assets/background.jpeg";
 import playstation from "./assets/playstation.jpg";
 import otherGames from "./assets/other_games.jpg";
 import "./App.css";
+import court1 from "./assets/court1.jpg";
+import court2 from "./assets/court2.jpg";
+import court3 from "./assets/court3.jpg";
+import court4 from "./assets/court4.jpg";
 
 function App() {
   return (
@@ -24,8 +28,8 @@ function App() {
         }}
       >
         <Container>
-          {/* Centered Logo */}
-          <Navbar.Brand href="#" className="position-absolute start-50 translate-middle-x">
+          {/* Logo */}
+          <Navbar.Brand href="#" className="position-absolute start-20 translate-middle-x">
             <img
               src={logo}
               alt="Padel Point Logo"
@@ -40,10 +44,13 @@ function App() {
           {/* Right Navigation Links */}
           <Nav className="ms-auto">
             <Nav.Link href="#about" className="text-white">About</Nav.Link>
+            <Nav.Link href="#our-courts" className="text-white">Our Courts</Nav.Link>
             <Nav.Link href="#pricing" className="text-white">Pricing</Nav.Link>
+            <Nav.Link href="#opening-hours" className="text-white">Opening Hours</Nav.Link>
             <Nav.Link href="#gaming-room" className="text-white">Gaming Room</Nav.Link>
             <Nav.Link href="#location" className="text-white">Location</Nav.Link>
             <Nav.Link href="#policies" className="text-white">Policies</Nav.Link>
+            <Nav.Link href="#footer" className="text-white">Contact Us</Nav.Link> 
           </Nav>
         </Container>
       </Navbar>
@@ -135,6 +142,72 @@ function App() {
         </p>
       </Container>
 
+      {/* Our Courts Section */}
+<Container
+  id="our-courts"
+  className="py-5"
+  style={{
+    marginTop: "20px",
+    background: "linear-gradient(to right, #fdf8f3, #f6f1eb)", // Soft neutral beige gradient
+    borderRadius: "10px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Light shadow for depth
+  }}
+>
+  <h2
+    className="text-center mb-4"
+    style={{
+      fontFamily: "'Poppins', sans-serif", // Match heading font
+      fontSize: "2.5rem",
+      fontWeight: "bold",
+      color: "#343a40", // Professional dark gray
+    }}
+  >
+    Our Courts
+  </h2>
+  <Row className="g-4 justify-content-center">
+    {[
+      { img: court1, title: "Court 1 - Premium Experience" },
+      { img: court2, title: "Court 2 - Advanced Level" },
+      { img: court3, title: "Court 3 - Beginner Friendly" },
+      { img: court4, title: "Entrance" },
+    ].map((court, idx) => (
+      <Col key={idx} md={3} sm={6} xs={12}>
+        <Card
+          className="h-100 text-center shadow border-0"
+          style={{
+            background: "linear-gradient(to bottom, #ffffff, #f8f9fa)",
+            borderRadius: "15px", // Rounded corners
+          }}
+        >
+          <Card.Img
+            variant="top"
+            src={court.img}
+            style={{
+              borderTopLeftRadius: "15px",
+              borderTopRightRadius: "15px", // Rounded image corners
+              height: "150px",
+              objectFit: "cover", // Ensure image fills the area without distortion
+            }}
+          />
+          <Card.Body>
+            <h5
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "600",
+                fontSize: "1.5rem",
+                color: "#003366", // Professional navy blue
+              }}
+            >
+              {court.title}
+            </h5>
+          </Card.Body>
+        </Card>
+      </Col>
+    ))}
+  </Row>
+</Container>
+
+
       {/* Pricing Section */}
       <Container
         id="pricing"
@@ -206,6 +279,78 @@ function App() {
           ))}
         </Row>
       </Container>
+
+      {/* Opening Hours Section */}
+<Container
+  id="opening-hours"
+  className="py-5"
+  style={{
+    marginTop: "20px",
+    background: "linear-gradient(to right, #fdf8f3, #f6f1eb)", // Soft neutral beige gradient
+    borderRadius: "10px",
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Light shadow for depth
+  }}
+>
+  <h2
+    className="text-center mb-4"
+    style={{
+      fontFamily: "'Poppins', sans-serif",
+      fontSize: "2.5rem",
+      fontWeight: "bold",
+      color: "#343a40", // Professional dark gray
+    }}
+  >
+    Opening Hours
+  </h2>
+  <Row className="justify-content-center">
+    {[
+      { days: "Sunday - Wednesday", hours: "3:00 PM - 3:00 AM" },
+      { days: "Thursday - Saturday", hours: "4:00 PM - 4:00 AM" },
+    ].map((time, idx) => (
+      <Col key={idx} md={4} sm={6} xs={12} className="mb-4">
+        <Card
+          className="h-100 text-center shadow border-0"
+          style={{
+            background: "linear-gradient(to bottom, #ffffff, #f8f9fa)", // Subtle gradient
+            borderRadius: "15px", // Smooth corners
+            padding: "20px 15px", // Ensure symmetrical padding
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "150px", // Fixed height for symmetry
+          }}
+        >
+          <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+            <h5
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontWeight: "600",
+                fontSize: "1.8rem",
+                color: "#003366", // Professional navy blue
+                marginBottom: "10px", // Consistent spacing
+              }}
+            >
+              {time.days}
+            </h5>
+            <p
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                color: "#495057", // Subtle gray for hours
+                marginBottom: "0", // No extra bottom spacing
+              }}
+            >
+              {time.hours}
+            </p>
+          </Card.Body>
+        </Card>
+      </Col>
+    ))}
+  </Row>
+</Container>
+
 
       {/* Gaming Room Section */}
       <Container
@@ -308,37 +453,43 @@ function App() {
         </div>
       </Container>
 
-      {/* Policies Section */}
+{/* Policies Section */}
 <Container
   id="policies"
-  className="py-4"
+  className="py-4" // Reduced padding
   style={{
     marginTop: "20px",
-    textAlign: "center",
+    marginBottom: "30px", // Adds space between the container and footer
+    background: "linear-gradient(to right, #fdf8f3, #f6f1eb)", // Soft neutral beige gradient
+    borderRadius: "10px", // Rounded corners
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Subtle shadow
+    padding: "15px 30px", // Slightly reduced padding
   }}
 >
-  <h5
-    className="text-center mb-3"
+  <h2
     style={{
       fontFamily: "'Poppins', sans-serif",
-      fontSize: "1.5rem",
-      fontWeight: "600",
-      color: "#6c757d", // Subtle gray for less emphasis
+      fontSize: "2.5rem", // Same font size as other headings
+      fontWeight: "bold",
+      color: "#343a40", // Professional dark gray
+      textAlign: "center",
     }}
   >
     Policies
-  </h5>
+  </h2>
   <ul
     style={{
       listStyleType: "disc", // Bullet points
-      textAlign: "left", // Align text to the left for better readability
+      textAlign: "left", // Align text to the left for readability
       fontFamily: "'Poppins', sans-serif",
-      fontSize: "1rem",
+      fontSize: "1.2rem", // Same font size as other text content
       color: "#6c757d", // Subtle gray text
       lineHeight: "1.8",
-      maxWidth: "700px", // Restrict width for symmetry
-      margin: "0 auto", // Center align the list container
-      paddingLeft: "20px", // Ensure bullets are properly indented
+      marginTop: "20px", // Space above list
+      paddingLeft: "20px", // Proper indentation for bullets
+      maxWidth: "800px", // Consistent width
+      marginLeft: "auto", // Center align the list container
+      marginRight: "auto",
     }}
   >
     <li style={{ marginBottom: "10px" }}>All players must wear appropriate sportswear and non-marking shoes.</li>
@@ -357,8 +508,10 @@ function App() {
 </Container>
 
 
+
       {/* Footer */}
       <div
+        id="footer"
         className="footer text-center text-white py-4"
         style={{
           backgroundColor: "#2C2C2C", // Professional gray footer background

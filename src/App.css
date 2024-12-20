@@ -21,3 +21,116 @@ body {
 .footer {
   background-color: #333;
 }
+/* Add offset for sections to avoid overlap with the navbar */
+[id] {
+  scroll-margin-top: 100px; /* Adjust this value to match your navbar height */
+}
+
+
+
+
+
+
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navbar Adjustments */
+.navbar {
+  padding: 10px 20px;
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 60vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust Hero Section Text */
+.hero-section h1 {
+  font-size: 3rem;
+}
+
+.hero-section a {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+/* Responsive Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Adjust Headings for Smaller Screens */
+h2 {
+  font-size: 2rem;
+}
+
+/* Responsive Cards */
+.card {
+  height: 100%;
+  padding: 15px;
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card h5 {
+  font-size: 1.2rem;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+/* Footer Adjustments */
+.footer {
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Mobile Adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-img-top {
+    max-height: 150px;
+  }
+
+  .card h5 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
