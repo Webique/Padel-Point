@@ -606,7 +606,7 @@ function App() {
               <strong>Phone:</strong> +966 546 807 100
             </p>
             <p style={{ margin: "0", fontSize: "1.1rem" }}>
-              <strong>Email:</strong> contact@padelpoint.com
+              <strong>Email:</strong> Padel.point777@gmail.com
             </p>
             {/* WhatsApp Group Link */}
       <p style={{ margin: "0", fontSize: "1.1rem", marginTop: "10px" }}>
@@ -638,7 +638,7 @@ function App() {
               style={{
                 color: "#ffffff",
                 textDecoration: "none",
-                fontSize: "1.5rem",
+                fontSize: "3rem",
               }}
             >
               <i className="fab fa-instagram"></i>
@@ -652,7 +652,7 @@ function App() {
               style={{
                 color: "#ffffff",
                 textDecoration: "none",
-                fontSize: "1.5rem",
+                fontSize: "3rem",
               }}
             >
               <i className="fab fa-whatsapp"></i>
@@ -666,7 +666,7 @@ function App() {
               style={{
                 color: "#ffffff",
                 textDecoration: "none",
-                fontSize: "1.5rem",
+                fontSize: "3rem",
               }}
             >
               <i className="fab fa-tiktok"></i>
