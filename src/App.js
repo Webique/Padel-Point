@@ -15,13 +15,19 @@ import court4 from "./assets/court4.jpg";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Add useState for menu toggle
 
+  const handleNavLinkClick = () => {
+    if (window.innerWidth <= 768) { // Close menu for small screens
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <>
       {/* Navbar */}
       <Navbar
   bg="dark"
   variant="dark"
-  expand="lg"
+  expand="md"
   sticky="top"
   className="shadow"
   style={{
@@ -70,7 +76,7 @@ function App() {
 
     {/* Collapsible Navigation Menu */}
     <Navbar.Collapse
-      id="basic-navbar-nav"
+      id="basic-navbar-nav" in={isMenuOpen}
       style={{
         backgroundColor: isMenuOpen ? "rgba(44, 44, 44, 0.9)" : "transparent",
         borderRadius: "10px",
@@ -107,6 +113,7 @@ function App() {
               
               transition: "all 0.3s ease", // Smooth transition
             }}
+            onClick={handleNavLinkClick} // Add this to close the menu
           >
             {link.text}
           </Nav.Link>
@@ -601,7 +608,25 @@ function App() {
             <p style={{ margin: "0", fontSize: "1.1rem" }}>
               <strong>Email:</strong> contact@padelpoint.com
             </p>
-          </div>
+            {/* WhatsApp Group Link */}
+      <p style={{ margin: "0", fontSize: "1.1rem", marginTop: "10px" }}>
+        <strong>Join Our WhatsApp Group:</strong>{" "}
+        <a
+          href="https://chat.whatsapp.com/IB5wR4jDbH38zvdtY5XLBB"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#25D366", // WhatsApp green color
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          Click Here
+        </a>
+      </p>
+    </div>
+
+          
 
           {/* Social Media Icons */}
           <div className="d-flex justify-content-center gap-3">
