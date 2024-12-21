@@ -97,12 +97,14 @@ function App() {
               fontSize: isMenuOpen ? "1.2rem" : "1rem", // Larger font when menu is open
               fontWeight: isMenuOpen ? "bold" : "normal", // Bold text when menu is open
               margin: isMenuOpen ? "10px 0" : "0px", // Add spacing when menu is open
+              marginTop: isMenuOpen ? "0" : "-35px", // Push text higher for laptops
               fontFamily: isMenuOpen
                 ? "'Poppins', sans-serif"
                 : "'Arial', sans-serif", // Modern font when open, default when closed
               textShadow: isMenuOpen
                 ? "1px 1px 2px rgba(0, 0, 0, 0.4)"
                 : "none", // Subtle shadow when open
+              
               transition: "all 0.3s ease", // Smooth transition
             }}
           >
