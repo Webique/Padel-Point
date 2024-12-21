@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0, user-scalable=yes">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
@@ -10,11 +10,19 @@
     <style>
       @media (max-width: 768px) {
         .navbar {
-          padding: 20px 25px; /* Further increase padding for a larger appearance */
-          font-size: 1.5rem; /* Larger font size */
+          padding: 15px 20px; /* Adjusted padding */
+          font-size: 1.2rem; /* Slightly increased font size */
+          display: flex;
+          flex-direction: row; /* Ensure horizontal layout */
+          justify-content: space-between; /* Space out navbar items */
+          align-items: center; /* Center items vertically */
         }
         .navbar-brand img {
-          height: 70px; /* Larger logo size */
+          height: 60px; /* Adjusted logo size */
+        }
+        .nav-link {
+          padding: 5px 10px; /* Adjust link padding for better fit */
+          white-space: nowrap; /* Prevent wrapping */
         }
       }
     </style>
