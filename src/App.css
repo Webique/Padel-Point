@@ -26,12 +26,6 @@ body {
   scroll-margin-top: 100px; /* Adjust this value to match your navbar height */
 }
 
-
-
-
-
-
-
 /* Make images responsive */
 img {
   max-width: 100%;
@@ -132,5 +126,14 @@ h2 {
 
   .footer {
     font-size: 0.8rem;
+  }
+
+  .navbar {
+    padding: 15px 20px; /* Increase padding for more height */
+    height: auto; /* Allow auto-adjust for content */
+  }
+
+  .navbar-brand img {
+    height: 60px; /* Make logo slightly bigger */
   }
 }
