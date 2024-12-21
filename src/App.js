@@ -122,7 +122,7 @@ function App() {
               color: "#EAEAEA", // Subtle off-white color
             }}
           >
-            Welcome to Padel Pointr
+            Welcome to Padel Point
           </h1>
           {/* Book Now Button */}
           <a
@@ -212,9 +212,9 @@ function App() {
   </h2>
   <Row className="g-4 justify-content-center">
     {[
-      { img: court1, title: "Court 1 - Premium Experience" },
-      { img: court2, title: "Court 2 - Advanced Level" },
-      { img: court3, title: "Court 3 - Beginner Friendly" },
+      { img: court1, title: "Court 1" },
+      { img: court2, title: "Court 2" },
+      { img: court3, title: "Court 3" },
       { img: court4, title: "Entrance" },
     ].map((court, idx) => (
       <Col key={idx} md={3} sm={6} xs={12}>
