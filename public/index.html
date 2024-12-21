@@ -7,9 +7,71 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+      @media (max-width: 768px) {
+        .navbar {
+          display: flex;
+          flex-direction: column;
+          background-color: #ffffff; /* White background for navbar */
+          color: black; /* Black text for visibility */
+        }
+
+        .navbar-toggler {
+          display: block;
+          background-color: #000; /* Black button */
+          color: #fff; /* White icon */
+          border: none;
+          padding: 10px;
+          font-size: 1.5rem;
+        }
+
+        .navbar-nav {
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .navbar-nav.show {
+          display: flex;
+        }
+
+        .nav-link {
+          padding: 10px 15px;
+          color: black; /* Black text */
+          text-decoration: none;
+        }
+
+        .nav-link:hover {
+          background-color: #f0f0f0; /* Highlight on hover */
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggler = document.querySelector(".navbar-toggler");
+        const nav = document.querySelector(".navbar-nav");
+
+        toggler.addEventListener("click", function () {
+          nav.classList.toggle("show");
+        });
+      });
+    </script>
     <title>Padel Point</title>
   </head>
   <body>
+    <nav class="navbar">
+      <button class="navbar-toggler">☰</button>
+      <div class="navbar-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#our-courts" class="nav-link">Our Courts</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#opening-hours" class="nav-link">Opening Hours</a>
+        <a href="#gaming-room" class="nav-link">Gaming Room</a>
+        <a href="#location" class="nav-link">Location</a>
+        <a href="#policies" class="nav-link">Policies</a>
+        <a href="#footer" class="nav-link">Contact Us</a>
+      </div>
+    </nav>
     <div id="root"></div>
   </body>
 </html>
