@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Padel-Point/static/css/main.ad4ce87d.css",
+    "main.css": "/Padel-Point/static/css/main.caf12451.css",
     "main.js": "/Padel-Point/static/js/main.3cf6c35d.js",
     "static/media/playstation.jpg": "/Padel-Point/static/media/playstation.443aca875bdb9132f9aa.jpg",
     "static/media/court2.jpg": "/Padel-Point/static/media/court2.a8979955262fb95c5f7a.jpg",
@@ -13,11 +13,11 @@
     "static/media/court1.jpg": "/Padel-Point/static/media/court1.4d48a9a464a10e17ab0f.jpg",
     "static/media/logo.jpg": "/Padel-Point/static/media/logo.0937d05b52551d7203aa.jpg",
     "index.html": "/Padel-Point/index.html",
-    "main.ad4ce87d.css.map": "/Padel-Point/static/css/main.ad4ce87d.css.map",
+    "main.caf12451.css.map": "/Padel-Point/static/css/main.caf12451.css.map",
     "main.3cf6c35d.js.map": "/Padel-Point/static/js/main.3cf6c35d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad4ce87d.css",
+    "static/css/main.caf12451.css",
     "static/js/main.3cf6c35d.js"
   ]
 }
