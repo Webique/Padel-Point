@@ -122,7 +122,7 @@ function App() {
               color: "#EAEAEA", // Subtle off-white color
             }}
           >
-            Welcome to Padel Point
+            Welcome to Padel Pointr
           </h1>
           {/* Book Now Button */}
           <a
