@@ -45,7 +45,7 @@ function App() {
       height: "100%",
       maxHeight: "120px", // Slightly larger logo
       objectFit: "contain",
-      marginTop: "-20px", // Move the logo higher
+      marginTop: "-28px", // Move the logo higher
     }}
   />
 </Navbar.Brand>
@@ -57,9 +57,9 @@ function App() {
   style={{
     border: "none",
     color: "#fff",
-    fontSize: "2.4rem", // Increase font size for larger icon
+    fontSize: "1.9rem", // Increase font size for larger icon
     padding: "10px", // Add padding for better spacing
-    marginTop: "-50px", // Move the toggle higher
+    marginTop: "-40px", // Move the toggle higher
     marginRight: "-50px", // Push the toggle to the right
   }}
   onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
@@ -586,7 +586,7 @@ function App() {
             <img
               src={logo}
               alt="Padel Point Logo"
-              style={{ height: "125px",maxHeight: "300px", // Match the header logo size
+              style={{ height: "140px",maxHeight: "300px", // Match the header logo size
                  objectFit: "contain" }}
             />
           </div>
