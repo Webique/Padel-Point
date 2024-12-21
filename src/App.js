@@ -31,26 +31,42 @@ function App() {
 >
   <Container>
     {/* Logo */}
-    <Navbar.Brand href="#" className="position-relative">
-      <img
-        src={logo}
-        alt="Padel Point Logo"
-        style={{
-          height: "100%",
-          maxHeight: "70px",
-          objectFit: "contain",
-        }}
-      />
-    </Navbar.Brand>
+    <Navbar.Brand
+  href="#"
+  className="position-relative"
+  style={{
+    marginLeft: "-75px", // Move the logo closer to the left
+  }}
+>
+  <img
+    src={logo}
+    alt="Padel Point Logo"
+    style={{
+      height: "100%",
+      maxHeight: "120px", // Slightly larger logo
+      objectFit: "contain",
+      marginTop: "-20px", // Move the logo higher
+    }}
+  />
+</Navbar.Brand>
+
 
     {/* Hamburger Toggle */}
     <Navbar.Toggle
-      aria-controls="basic-navbar-nav"
-      style={{ border: "none", color: "#fff" }}
-      onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
-    >
-      <span className="navbar-toggler-icon"></span>
-    </Navbar.Toggle>
+  aria-controls="basic-navbar-nav"
+  style={{
+    border: "none",
+    color: "#fff",
+    fontSize: "2.4rem", // Increase font size for larger icon
+    padding: "10px", // Add padding for better spacing
+    marginTop: "-50px", // Move the toggle higher
+    marginRight: "-50px", // Push the toggle to the right
+  }}
+  onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
+>
+  <span className="navbar-toggler-icon"></span>
+</Navbar.Toggle>
+
 
     {/* Collapsible Navigation Menu */}
     <Navbar.Collapse
@@ -570,7 +586,8 @@ function App() {
             <img
               src={logo}
               alt="Padel Point Logo"
-              style={{ height: "70px", objectFit: "contain" }}
+              style={{ height: "125px",maxHeight: "300px", // Match the header logo size
+                 objectFit: "contain" }}
             />
           </div>
 
