@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Padel-Point/static/css/main.ad4ce87d.css",
+    "main.js": "/Padel-Point/static/js/main.3cf6c35d.js",
+    "static/media/playstation.jpg": "/Padel-Point/static/media/playstation.443aca875bdb9132f9aa.jpg",
+    "static/media/court2.jpg": "/Padel-Point/static/media/court2.a8979955262fb95c5f7a.jpg",
+    "static/media/court3.jpg": "/Padel-Point/static/media/court3.96e204834cbf034aab68.jpg",
+    "static/media/court4.jpg": "/Padel-Point/static/media/court4.6ae22c717a22834049ed.jpg",
+    "static/media/other_games.jpg": "/Padel-Point/static/media/other_games.bc283fac4fb093e95fd5.jpg",
+    "static/media/jakaroo.jpg": "/Padel-Point/static/media/jakaroo.c58c4e052bb7a6131fdd.jpg",
+    "static/media/baloot.jpg": "/Padel-Point/static/media/baloot.76c6ae90b3f9fe97869c.jpg",
+    "static/media/background.jpeg": "/Padel-Point/static/media/background.70965ceb3aeac7a2488e.jpeg",
+    "static/media/court1.jpg": "/Padel-Point/static/media/court1.4d48a9a464a10e17ab0f.jpg",
+    "static/media/logo.jpg": "/Padel-Point/static/media/logo.0937d05b52551d7203aa.jpg",
+    "index.html": "/Padel-Point/index.html",
+    "main.ad4ce87d.css.map": "/Padel-Point/static/css/main.ad4ce87d.css.map",
+    "main.3cf6c35d.js.map": "/Padel-Point/static/js/main.3cf6c35d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad4ce87d.css",
+    "static/js/main.3cf6c35d.js"
+  ]
+}
