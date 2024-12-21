@@ -103,34 +103,31 @@ h2 {
   font-size: 0.9rem;
 }
 
-/* Media Queries for Mobile Adjustments */
 @media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.5rem;
+  /* Adjust general layout for tablets and phones */
+  .hero-section {
+    height: 40vh; /* Reduce hero section height */
+    background-size: cover;
+    font-size: 1.5rem;
   }
 
-  .hero-section a {
-    font-size: 0.9rem;
-    padding: 8px 15px;
+  .navbar {
+    font-size: 0.9rem; /* Make navbar text smaller */
   }
 
-  h2 {
-    font-size: 1.8rem;
+  .card {
+    margin: 10px auto; /* Add space between cards */
+    width: 90%; /* Make cards take full width */
   }
 
-  .card-img-top {
-    max-height: 150px;
+  h1, h2 {
+    font-size: 1.8rem; /* Reduce heading sizes */
   }
 
-  .card h5 {
-    font-size: 1rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-
-  .footer {
-    font-size: 0.8rem;
+  p {
+    font-size: 1rem; /* Adjust paragraph text size */
   }
 }
+
+
+

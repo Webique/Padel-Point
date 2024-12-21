@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react"; // Single import for React and useState
 import { Container, Navbar, Nav, Row, Col, Card } from "react-bootstrap";
 import jakaroo from "./assets/jakaroo.jpg";
 import baloot from "./assets/baloot.jpg";
@@ -13,47 +13,93 @@ import court3 from "./assets/court3.jpg";
 import court4 from "./assets/court4.jpg";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Add useState for menu toggle
+
   return (
     <>
       {/* Navbar */}
       <Navbar
-        bg="dark"
-        variant="dark"
-        expand="lg"
-        sticky="top"
-        className="shadow"
+  bg="dark"
+  variant="dark"
+  expand="lg"
+  sticky="top"
+  className="shadow"
+  style={{
+    height: "80px",
+    backgroundColor: "#2C2C2C",
+  }}
+>
+  <Container>
+    {/* Logo */}
+    <Navbar.Brand href="#" className="position-relative">
+      <img
+        src={logo}
+        alt="Padel Point Logo"
         style={{
-          height: "80px",
-          backgroundColor: "#2C2C2C", // Professional gray background
+          height: "100%",
+          maxHeight: "70px",
+          objectFit: "contain",
         }}
-      >
-        <Container>
-          {/* Logo */}
-          <Navbar.Brand href="#" className="position-absolute start-20 translate-middle-x">
-            <img
-              src={logo}
-              alt="Padel Point Logo"
-              style={{
-                height: "100%",
-                maxHeight: "70px",
-                objectFit: "contain",
-              }}
-            />
-          </Navbar.Brand>
+      />
+    </Navbar.Brand>
 
-          {/* Right Navigation Links */}
-          <Nav className="ms-auto">
-            <Nav.Link href="#about" className="text-white">About</Nav.Link>
-            <Nav.Link href="#our-courts" className="text-white">Our Courts</Nav.Link>
-            <Nav.Link href="#pricing" className="text-white">Pricing</Nav.Link>
-            <Nav.Link href="#opening-hours" className="text-white">Opening Hours</Nav.Link>
-            <Nav.Link href="#gaming-room" className="text-white">Gaming Room</Nav.Link>
-            <Nav.Link href="#location" className="text-white">Location</Nav.Link>
-            <Nav.Link href="#policies" className="text-white">Policies</Nav.Link>
-            <Nav.Link href="#footer" className="text-white">Contact Us</Nav.Link> 
-          </Nav>
-        </Container>
-      </Navbar>
+    {/* Hamburger Toggle */}
+    <Navbar.Toggle
+      aria-controls="basic-navbar-nav"
+      style={{ border: "none", color: "#fff" }}
+      onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
+    >
+      <span className="navbar-toggler-icon"></span>
+    </Navbar.Toggle>
+
+    {/* Collapsible Navigation Menu */}
+    <Navbar.Collapse
+      id="basic-navbar-nav"
+      style={{
+        backgroundColor: isMenuOpen ? "rgba(44, 44, 44, 0.9)" : "transparent",
+        borderRadius: "10px",
+        padding: isMenuOpen ? "10px" : "0px",
+        transition: "all 0.3s ease",
+      }}
+    >
+      <Nav className="ms-auto">
+        {[
+          { href: "#about", text: "About" },
+          { href: "#our-courts", text: "Our Courts" },
+          { href: "#pricing", text: "Pricing" },
+          { href: "#opening-hours", text: "Opening Hours" },
+          { href: "#gaming-room", text: "Gaming Room" },
+          { href: "#location", text: "Location" },
+          { href: "#policies", text: "Policies" },
+          { href: "#footer", text: "Contact Us" },
+        ].map((link, idx) => (
+          <Nav.Link
+            key={idx}
+            href={link.href}
+            className="text-white"
+            style={{
+              fontSize: isMenuOpen ? "1.2rem" : "1rem", // Larger font when menu is open
+              fontWeight: isMenuOpen ? "bold" : "normal", // Bold text when menu is open
+              margin: isMenuOpen ? "10px 0" : "0px", // Add spacing when menu is open
+              fontFamily: isMenuOpen
+                ? "'Poppins', sans-serif"
+                : "'Arial', sans-serif", // Modern font when open, default when closed
+              textShadow: isMenuOpen
+                ? "1px 1px 2px rgba(0, 0, 0, 0.4)"
+                : "none", // Subtle shadow when open
+              transition: "all 0.3s ease", // Smooth transition
+            }}
+          >
+            {link.text}
+          </Nav.Link>
+        ))}
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+
+
+
 
       {/* Hero Section */}
       <div
@@ -453,7 +499,7 @@ function App() {
         </div>
       </Container>
 
-{/* Policies Section */}
+{/* Replacement and Refund Policy Section */}
 <Container
   id="policies"
   className="py-4" // Reduced padding
@@ -475,7 +521,7 @@ function App() {
       textAlign: "center",
     }}
   >
-    Policies
+    Replacement and Refund Policy
   </h2>
   <ul
     style={{
@@ -492,20 +538,21 @@ function App() {
       marginRight: "auto",
     }}
   >
-    <li style={{ marginBottom: "10px" }}>All players must wear appropriate sportswear and non-marking shoes.</li>
     <li style={{ marginBottom: "10px" }}>
-      Bookings are non-refundable but can be rescheduled if notified 24 hours in advance.
-    </li>
-    <li style={{ marginBottom: "10px" }}>Players must arrive 10 minutes before their scheduled time.</li>
-    <li style={{ marginBottom: "10px" }}>Food and beverages are not allowed inside the court area.</li>
-    <li style={{ marginBottom: "10px" }}>
-      Padel Point is not responsible for any lost or damaged personal belongings.
+      In case you want to cancel your reservation, you must notify us at least 2 hours before the scheduled reservation time to receive a refund.
     </li>
     <li style={{ marginBottom: "10px" }}>
-      Management reserves the right to refuse entry or remove anyone violating the rules.
+      If the client does not arrive within 20 minutes of the scheduled reservation time, the reservation will be cancelled and the payment will not be refunded.
+    </li>
+    <li style={{ marginBottom: "10px" }}>
+      Rescheduling the reservation to another day is allowed without a refund.
+    </li>
+    <li style={{ marginBottom: "10px" }}>
+      There will be no refund if the client does not show up.
     </li>
   </ul>
 </Container>
+
 
 
 
