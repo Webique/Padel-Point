@@ -2,7 +2,7 @@
   "name": "padel-point",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YosufAlAwadi.github.io/Padel-Point",
+ "homepage": "https://www.padelpointsa.com",
   "dependencies": {
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
